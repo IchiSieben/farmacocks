@@ -1,0 +1,46 @@
+farma_intensiva/
+├── app.py                       # entrypoint Streamlit
+│
+├── ui/
+│   ├── __init__.py
+│   ├── layout.py                # tabs / navegación
+│   ├── inputs.py                # datos del paciente
+│   ├── results.py               # resultados renales
+│   └── drugs.py                 # selector + UI ajuste fármacos
+│
+├── core/
+│   ├── __init__.py
+│   │
+│   ├── renal.py                 # Cockcroft-Gault, CKD-EPI, MDRD
+│   ├── rules.py                 # alertas clínicas generales
+│   ├── units.py                 # conversiones (kg, mg/kg, ml/min)
+│   ├── enums.py                 # constantes clínicas compartidas
+│   │
+│   └── drugs/
+│       ├── __init__.py
+│       │
+│       ├── antibioticos/
+│       │   ├── __init__.py
+│       │   ├── vancomicina.py
+│       │   ├── gentamicina.py
+│       │   └── ceftriaxona.py
+│       │
+│       ├── analgosedacion/
+│       │   ├── __init__.py
+│       │   ├── morfina.py
+│       │   └── midazolam.py
+│       │
+│       ├── vasoactivos/
+│       │   ├── __init__.py
+│       │   ├── norepinefrina.py
+│       │   └── dopamina.py
+│       │
+│       └── anticonvulsivantes/
+│           ├── __init__.py
+│           ├── fenitoina.py
+│           └── levetiracetam.py
+│
+├── data/
+│   └── bibliography.py          # fuentes clínicas
+│
+└── README.md
